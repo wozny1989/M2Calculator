@@ -20,5 +20,5 @@
   <string name="btn_minus">-</string>
   <string name="btn_plus">+</string>
   <string name="btn_equal">=</string>
-  <string name="btn_comma">,</string>
+  <string name="btn_dot">.</string>
 </resources>
