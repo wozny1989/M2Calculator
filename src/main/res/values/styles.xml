@@ -1,0 +1,34 @@
+<resources>
+
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">0dp</item>
+  </style>
+
+  <style name="ButtonsDimesions">
+    <item name="layout_constraintDimensionRatio">1:1</item>
+    <item name="layout_constraintWidth_percent">.25</item>
+    <item name="android:textSize">@dimen/buttonTextSize</item>
+    <item name="android:textColor">@color/textColor</item>
+  </style>
+
+  <style name="ButtonNumbers" parent="ButtonsDimesions">
+    <item name="android:backgroundTint">@color/colorButtonNumbers</item>
+  </style>
+
+  <style name="ButtonTop" parent="ButtonsDimesions">
+    <item name="android:backgroundTint">@color/colorButtonTop</item>
+  </style>
+
+  <style name="ButtonRight" parent="ButtonsDimesions">
+    <item name="android:backgroundTint">@color/colorButtonRight</item>
+  </style>
+
+  <style name="displayNumber">
+    <item name="android:textColor">@color/textColor</item>
+    <item name="android:textSize">@dimen/displayTextSize</item>
+  </style>
+</resources>
