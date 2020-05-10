@@ -3,7 +3,7 @@ package com.example.m2calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   String currentOperand;
   String operation;
   TextView display;
+  Vibrator vibrator;
+  final long vibrationTime = 10;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     setContentView(R.layout.activity_main);
 
     this.display = findViewById(R.id.display_number);
+    this.vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
 //    Number buttons
     Button btnZero = findViewById(R.id.btn_zero);
@@ -177,6 +180,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     } catch (Exception e) {
 
     } finally {
+      this.vibrator.vibrate(this.vibrationTime);
       updateDisplay();
     }
   }
