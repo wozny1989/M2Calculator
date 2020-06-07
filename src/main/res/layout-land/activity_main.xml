@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <LinearLayout
+    android:id="@+id/mainWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:layout_weight="1">
+
+      <TextView
+        android:id="@+id/display_number"
+        style="@style/displayNumberLandscape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:gravity="bottom|right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_bracket_left"
+          android:tag="clear"
+          android:textSize="25dp"
+          android:text="@string/btn_bracket_left"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_bracket_right"
+          android:tag="clear"
+          android:textSize="25dp"
+          android:text="@string/btn_bracket_right"
+          app:layout_constraintStart_toEndOf="@id/btn_bracket_left"
+          app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_mc"
+          android:tag="clear"
+          android:textSize="25dp"
+          android:text="@string/btn_mc"
+          app:layout_constraintStart_toEndOf="@id/btn_bracket_right"
+          app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_m_plus"
+          android:tag="clear"
+          android:textSize="25dp"
+          android:text="@string/btn_m_plus"
+          app:layout_constraintStart_toEndOf="@id/btn_mc"
+          app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_m_minus"
+          android:tag="clear"
+          android:textSize="25dp"
+          android:text="@string/btn_m_minus"
+          app:layout_constraintStart_toEndOf="@id/btn_m_plus"
+          app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_m_r"
+          android:tag="clear"
+          android:textSize="25dp"
+          android:text="@string/btn_m_r"
+          app:layout_constraintStart_toEndOf="@id/btn_m_minus"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_C"
+          android:tag="clear"
+          android:text="@string/btn_clear"
+          app:layout_constraintStart_toEndOf="@+id/btn_m_r"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_sign"
+          android:tag="sign"
+          android:text="@string/btn_sign"
+          app:layout_constraintStart_toEndOf="@+id/btn_C"
+          app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_percent"
+          android:tag="percent"
+          android:text="@string/btn_percent"
+          app:layout_constraintStart_toEndOf="@+id/btn_sign"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonRightLandscape"
+          android:id="@+id/btn_divide"
+          android:tag="operation"
+          android:text="@string/btn_divide"
+          app:layout_constraintStart_toEndOf="@+id/btn_percent"
+          app:layout_constraintTop_toTopOf="parent"/>
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_two_nd"
+          android:textSize="18dp"
+          android:tag="number"
+          android:text="@string/btn_two_nd"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_x_two"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_x_two"
+          app:layout_constraintStart_toEndOf="@+id/btn_two_nd"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_x_three"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_x_three"
+          app:layout_constraintStart_toEndOf="@+id/btn_x_two"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_x_y"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_x_y"
+          app:layout_constraintStart_toEndOf="@+id/btn_x_three"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_e_x"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_e_x"
+          app:layout_constraintStart_toEndOf="@+id/btn_x_y"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_ten_x"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_ten_x"
+          app:layout_constraintStart_toEndOf="@+id/btn_e_x"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_seven"
+          android:tag="number"
+          android:text="@string/btn_seven"
+          app:layout_constraintStart_toEndOf="@id/btn_ten_x"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_eight"
+          android:tag="number"
+          android:text="@string/btn_eight"
+          app:layout_constraintStart_toEndOf="@+id/btn_seven"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_nine"
+          android:tag="number"
+          android:text="@string/btn_nine"
+          app:layout_constraintStart_toEndOf="@+id/btn_eight"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonRightLandscape"
+          android:id="@+id/btn_multiply"
+          android:tag="operation"
+          android:text="@string/btn_multiply"
+          app:layout_constraintStart_toEndOf="@+id/btn_nine"
+          app:layout_constraintTop_toTopOf="parent"/>
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_one_x"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_one_x"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_two_x"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_two_x"
+          app:layout_constraintStart_toEndOf="@+id/btn_one_x"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_three_x"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_three_x"
+          app:layout_constraintStart_toEndOf="@+id/btn_two_x"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_y_x"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_y_x"
+          app:layout_constraintStart_toEndOf="@+id/btn_three_x"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_in"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_in"
+          app:layout_constraintStart_toEndOf="@+id/btn_y_x"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_log_ten"
+          android:tag="number"
+          android:textSize="16dp"
+          android:text="@string/btn_log_ten"
+          app:layout_constraintStart_toEndOf="@+id/btn_in"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_four"
+          android:tag="number"
+          android:text="@string/btn_four"
+          app:layout_constraintStart_toEndOf="@+id/btn_log_ten"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_five"
+          android:tag="number"
+          android:text="@string/btn_five"
+          app:layout_constraintStart_toEndOf="@+id/btn_four"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_six"
+          android:tag="number"
+          android:text="@string/btn_six"
+          app:layout_constraintStart_toEndOf="@+id/btn_five"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonRightLandscape"
+          android:id="@+id/btn_minus"
+          android:tag="operation"
+          android:text="@string/btn_minus"
+          app:layout_constraintStart_toEndOf="@+id/btn_six"
+          app:layout_constraintTop_toTopOf="parent"/>
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_x_exclamation_mark"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_x_exclamation_mark"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_sin"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_sin"
+          app:layout_constraintStart_toEndOf="@id/btn_x_exclamation_mark"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_cos"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_cos"
+          app:layout_constraintStart_toEndOf="@id/btn_sin"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_tan"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_tan"
+          app:layout_constraintStart_toEndOf="@id/btn_cos"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_e"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_e"
+          app:layout_constraintStart_toEndOf="@id/btn_tan"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          android:id="@+id/btn_ee"
+          style="@style/ButtonTopLandscape"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_ee"
+          app:layout_constraintStart_toEndOf="@id/btn_e"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_one"
+          android:tag="number"
+          android:text="@string/btn_one"
+          app:layout_constraintStart_toEndOf="@id/btn_ee"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_two"
+          android:tag="number"
+          android:text="@string/btn_two"
+          app:layout_constraintStart_toEndOf="@+id/btn_one"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_three"
+          android:tag="number"
+          android:text="@string/btn_three"
+          app:layout_constraintStart_toEndOf="@+id/btn_two"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          android:id="@+id/btn_plus"
+          style="@style/ButtonRightLandscape"
+          android:tag="operation"
+          android:text="@string/btn_plus"
+          app:layout_constraintStart_toEndOf="@+id/btn_three"
+          app:layout_constraintTop_toTopOf="parent" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+          android:id="@+id/btn_rad"
+          style="@style/ButtonTopLandscape"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_rad"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_sinh"
+          android:tag="number"
+          android:textSize="22dp"
+          android:text="@string/btn_sinh"
+          app:layout_constraintStart_toEndOf="@id/btn_rad"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_cosh"
+          android:tag="number"
+          android:textSize="20dp"
+          android:text="@string/btn_cosh"
+          app:layout_constraintStart_toEndOf="@id/btn_sinh"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_tanh"
+          android:tag="number"
+          android:textSize="20dp"
+          android:text="@string/btn_tanh"
+          app:layout_constraintStart_toEndOf="@id/btn_cosh"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_pi"
+          android:tag="number"
+          android:textSize="25dp"
+          android:text="@string/btn_pi"
+          app:layout_constraintStart_toEndOf="@id/btn_tanh"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonTopLandscape"
+          android:id="@+id/btn_rand"
+          android:tag="number"
+          android:textSize="18dp"
+          android:text="@string/btn_rand"
+          app:layout_constraintStart_toEndOf="@id/btn_pi"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_zero"
+          android:tag="number"
+          android:text="@string/btn_zero"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toEndOf="@id/btn_rand"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintWidth_percent="0.2"
+          app:layout_constraintDimensionRatio="auto"/>
+
+        <Button
+          style="@style/ButtonNumbersLandscape"
+          android:id="@+id/btn_dot"
+          android:tag="dot"
+          android:text="@string/btn_dot"
+          app:layout_constraintStart_toEndOf="@+id/btn_zero"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+          style="@style/ButtonRightLandscape"
+          android:id="@+id/btn_equal"
+          android:tag="equal"
+          android:text="@string/btn_equal"
+          app:layout_constraintStart_toEndOf="@+id/btn_dot"
+          app:layout_constraintTop_toTopOf="parent"/>
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

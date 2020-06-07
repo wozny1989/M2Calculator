@@ -21,4 +21,41 @@
   <string name="btn_plus">+</string>
   <string name="btn_equal">=</string>
   <string name="btn_dot">.</string>
+  
+<!--  Extend view-->
+
+  <string name="btn_bracket_left">(</string>
+  <string name="btn_bracket_right">)</string>
+  <string name="btn_mc">mc</string>
+  <string name="btn_m_plus">m+</string>
+  <string name="btn_m_minus">m-</string>
+  <string name="btn_m_r">mr</string>
+
+  <string name="btn_two_nd">2nd</string>
+  <string name="btn_x_two">x2</string>
+  <string name="btn_x_three">x3</string>
+  <string name="btn_x_y">xy</string>
+  <string name="btn_e_x">ex</string>
+  <string name="btn_ten_x">10x</string>
+
+  <string name="btn_one_x">1/x</string>
+  <string name="btn_two_x">2/x</string>
+  <string name="btn_three_x">3/x</string>
+  <string name="btn_y_x">y/x</string>
+  <string name="btn_in">In</string>
+  <string name="btn_log_ten">log10</string>
+
+  <string name="btn_x_exclamation_mark">x!</string>
+  <string name="btn_sin">sin</string>
+  <string name="btn_cos">cos</string>
+  <string name="btn_tan">tan</string>
+  <string name="btn_e">e</string>
+  <string name="btn_ee">EE</string>
+
+  <string name="btn_rad">Rad</string>
+  <string name="btn_sinh">sinh</string>
+  <string name="btn_cosh">cosh</string>
+  <string name="btn_tanh">tanh</string>
+  <string name="btn_pi">π</string>
+  <string name="btn_rand">Rand</string>
 </resources>

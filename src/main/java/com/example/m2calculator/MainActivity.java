@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -70,11 +71,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button sign = findViewById(R.id.btn_sign);
     Button percent = findViewById(R.id.btn_percent);
 
+//    Extend view buttons
+    Button btnTwoNd = findViewById(R.id.btn_two_nd);
+    Button btnXTwo = findViewById(R.id.btn_x_two);
+    Button btnXThree = findViewById(R.id.btn_x_three);
+    Button btnXY = findViewById(R.id.btn_x_y);
+    Button btnEX = findViewById(R.id.btn_e_x);
+    Button btnTenX = findViewById(R.id.btn_ten_x);
+
+    Button btnOneX = findViewById(R.id.btn_one_x);
+    Button btnTwoX = findViewById(R.id.btn_two_x);
+    Button btnThreeX = findViewById(R.id.btn_three_x);
+    Button btnYX = findViewById(R.id.btn_y_x);
+    Button btnLogTen = findViewById(R.id.btn_log_ten);
+
     clear.setOnClickListener(this);
     sign.setOnClickListener(this);
     percent.setOnClickListener(this);
 
+
+
     init();
+
+    btnTwoNd.setText(Html.fromHtml("2<sup>nd</sup>"));
+    btnXTwo.setText(Html.fromHtml("X<sup>2</sup>"));
+    btnXThree.setText(Html.fromHtml("X<sup>3</sup>"));
+    btnXY.setText(Html.fromHtml("X<sup>y</sup>"));
+    btnEX.setText(Html.fromHtml("e<sup>x</sup>"));
+    btnTenX.setText(Html.fromHtml("10<sup>x</sup>"));
+
+    btnOneX.setText(Html.fromHtml("1&frasl;<sub>x</sub>"));
+    btnTwoX.setText(Html.fromHtml("<sup>2</sup>&radic;x"));
+    btnThreeX.setText(Html.fromHtml("<sup>3</sup>&radic;x"));
+    btnYX.setText(Html.fromHtml("<sup>y</sup>&radic;x"));
+    btnLogTen.setText(Html.fromHtml("log<sub>10</sub>"));
   }
 
   void init() {
